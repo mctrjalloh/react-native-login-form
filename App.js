@@ -6,41 +6,46 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{ flex: 1 }}>Login With</Text>
+        <View style={styles.topVoid} />
+        <Text style={styles.loginInTitle}>Login With</Text>
 
-        <View style={{ flex: 1, flexDirection: "row" }}>
-          <View
-            style={{ width: 50, height: 50, backgroundColor: "powderblue" }}
-          />
-          <View style={{ width: 50, height: 50, backgroundColor: "skyblue" }} />
-          <View
-            style={{ width: 50, height: 50, backgroundColor: "steelblue" }}
-          />
+        <View style={styles.loginInWith}>
+          <View style={{ width: 50, height: 50, backgroundColor: "red" }} />
+          {/* <Image
+            source={{
+              uri:
+                "/home/mctrjalloh/projects/mobile-apps/samawaye/src/assets/img/facebook-logo.png"
+            }}
+          /> */}
+          <View style={{ width: 50, height: 50, backgroundColor: "green" }} />
+          <View style={{ width: 50, height: 50, backgroundColor: "blue" }} />
         </View>
 
-        <View style={{ flex: 3, flexDirection: "column" }}>
+        <View style={styles.lineBreak}>
+          <Text justifyContent="center">
+            ----------------------------- or -----------------------------
+          </Text>
+        </View>
+
+        <View style={styles.loginForm}>
           <TextInput
-            style={{
-              width: 250,
-              height: 40,
-              borderColor: "gray"
-            }}
+            style={styles.textInputs}
             textContentType="username"
             value="Username"
           />
           <TextInput
-            style={{
-              width: 250,
-              height: 40,
-              borderColor: "gray"
-            }}
+            style={styles.textInputs}
             textContentType="password"
             value="Password"
           />
-          <Button title="LOGIN" onPress={() => alert("Loged In")} />
+          <Button
+            style={styles.loginButton}
+            title="LOGIN"
+            onPress={() => alert("Loged In")}
+          />
         </View>
 
-        <Text>Looking to create an account?</Text>
+        <Text style={styles.signUpLink}>Looking to create an account?</Text>
       </View>
     );
   }
@@ -51,6 +56,45 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "flex-end"
+  },
+  topVoid: {
+    flex: 0.5,
+    width: 150
+    // backgroundColor: "#ff0"
+  },
+  loginInTitle: {
+    // backgroundColor: "red",
+    flex: 1
+  },
+  loginInWith: {
+    // backgroundColor: "#0ff",
+    flex: 1,
+    width: 250,
+    flexDirection: "row",
+    justifyContent: "space-evenly"
+    // alignItems: "center"
+  },
+  lineBreak: {
+    // backgroundColor: "red",
+    flex: 0.3
+  },
+  loginForm: {
+    // backgroundColor: "#ff0",
+    flex: 3,
+    flexDirection: "column"
+  },
+  textInputs: {
+    width: 250,
+    height: 60,
+    borderColor: "gray"
+  },
+  loginButton: {
+    // backgroundColor: "green",
+    // flex: 3
+  },
+  signUpLink: {
+    // backgroundColor: "#fa0",
+    flex: 1
   }
 });
