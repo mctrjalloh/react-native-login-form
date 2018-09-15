@@ -14,7 +14,7 @@ export default class LogIn extends React.Component {
           {/* <Image
             source={{
               uri:
-                "/home/mctrjalloh/projects/mobile-apps/samawaye/src/assets/img/facebook-logo.png"
+                "./assets/img/facebook-logo.png"
             }}
           /> */}
           <View style={{ width: 50, height: 50, backgroundColor: "green" }} />
